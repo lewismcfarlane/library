@@ -31,7 +31,8 @@ function displayLibrary() {
 function createBookElement(book) {
 	const bookContainer = document.createElement('div');
 	bookContainer.classList.add('book-container');
-    bookContainer.classList.add(book.title);
+    const bookTitle = book.title.replace(/\s+/g, '-');
+    bookContainer.classList.add(bookTitle);
 
 	const bookDiv = document.createElement('div');
 	bookDiv.classList.add('book');
