@@ -154,21 +154,13 @@ bookContainers.forEach(container => {
 			const status = event.target.value;
 			const bookID = container.querySelector('.book').dataset.bookid;
 			const book = myLibrary.find(book => book.bookID === parseInt(bookID));
-
-			if (book) {
-				book.isRead = status;
-				console.log('Book Updated:', book);
-			}
+			book.isRead = status;	
 		});
 	});
     deleteButtons.forEach(button => {
         button.addEventListener('click', function(event) {
             const bookContainerElementToRemove = event.target.closest('.book-container');
-            if (bookContainerElementToRemove) {
-                removeBookElement(bookContainerElementToRemove);
-            } else {
-                console.error('Book container element not found.');
-            }
+            removeBookElement(bookContainerElementToRemove);
         });
     });
 });
