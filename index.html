@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="header"></div>
+
+<div class="main">
+    <div id="library-container">
+        <button id="add-book">Add Book</button>
+        <button id="console">Console Log</button>
+        <div id="library">
+            <div class="book-container">
+                <div class="book" data-bookid="1">
+                    <div class="book-info">
+                    <p>Title: Hobbit</p>
+                    <p>Author: Tolkien</p>
+                    <p>Pages: 350</p>
+                    <p>Read:
+                        <label class="radio-label">
+                        <input type="radio" name="TheHobbit" value="yes" checked>
+                        <span class="radio-custom the-hobbit"></span>
+                        Yes
+                      </label>
+                      <label class="radio-label">
+                        <input type="radio" name="TheHobbit" value="no">
+                        <span class="radio-custom the-hobbit"></span>
+                        No
+                      </label></p>
+                      </div>
+                    <button class="delete-button">X</button>
+                </div>
+            </div>
+            <div class="book-container">
+
+                <div class="book" data-bookid="2">
+                    <div class="book-info">
+                    <p>Title: Any Time</p>
+                    <p>Author: Howard Smith</p>
+                    <p>Pages: 401</p>
+                    <p>Read:
+                        <label class="radio-label">
+                          <input type="radio" name="AnyTime" value="yes">
+                          <span class="radio-custom any-time"></span>
+                          Yes
+                        </label>
+                        <label class="radio-label">
+                          <input type="radio" name="AnyTime" value="no" checked>
+                          <span class="radio-custom any-time"></span>
+                          No
+                        </label>
+                      </p>
+                    </div>
+                    <button class="delete-button">X</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+
+    <form>
+        <label class="radio-label">
+          <input type="radio" name="size" value="small">
+          <span class="radio-custom"></span>
+          Yes
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="size" value="medium">
+          <span class="radio-custom"></span>
+          No
+        </label>
+      </form>
+
+
+</div>
+    
+</body>
+<script src="app.js"></script>
+</html>
