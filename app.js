@@ -1,15 +1,19 @@
 let myLibrary = [];
 let lastBookID = 0;
 
-function Book(title, author, pages, isRead) {
-	this.bookID = ++lastBookID;
-	this.title = title;
-	this.author = author;
-	this.pages = pages;
-	this.isRead = isRead;
-	this.info = function() {
+
+class Book {
+	constructor(title, author, pages, isRead) {
+		this.bookID = ++lastBookID;
+		this.title = title;
+		this.author = author;
+		this.pages = pages;
+		this.isRead = isRead;
+	}
+
+	bookInfo() {
 		return `${this.title} by ${this.author}, ${this.pages} pages, ${this.isRead}`
-	};
+	}
 }
 
 const TheHobbit = new Book('The Hobbit', 'Tolkien', '350', 'yes');
