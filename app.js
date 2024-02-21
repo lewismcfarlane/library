@@ -149,7 +149,6 @@ const bookContainers = document.querySelectorAll('.book-container');
 
 bookContainers.forEach(container => {
 	const radioInputs = container.querySelectorAll('input[type="radio"]');
-    const deleteButtons = container.querySelectorAll('.delete-button');
 	radioInputs.forEach(input => {
 		input.addEventListener('change', function(event) {
 			const status = event.target.value;
@@ -158,6 +157,8 @@ bookContainers.forEach(container => {
 			book.isRead = status;	
 		});
 	});
+    
+    const deleteButtons = container.querySelectorAll('.delete-button');
     deleteButtons.forEach(button => {
         button.addEventListener('click', function(event) {
             const bookContainerElementToRemove = event.target.closest('.book-container');
